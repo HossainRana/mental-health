@@ -1,0 +1,33 @@
+.left_sidebar{
+    background: #fff;
+    box-shadow: 0 0px 10px rgba(218, 211, 211, 0.25), 0 4px 6px rgba(204, 191, 191, 0.22);
+    width: 90%;
+    padding-left: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 63px;
+    left: 0;
+    background-color: #ffffff;
+    padding-top: 20px;
+}
+
+.link{
+    font-size: 14px;
+    color: green;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: rgb(31, 18, 216);
+    font-size: 16px;
+}
+.list_item{
+    list-style: none;
+}
+.h1{
+    font-size: 24px;
+}

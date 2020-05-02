@@ -1,0 +1,101 @@
+.header{
+
+    background: rgba(255, 255, 255, 0);
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    margin-right: 50px;
+}
+
+.dropdown{
+    background: #fff;
+    border: none;
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'orbitron';
+}
+
+.show > .btn-primary.dropdown-toggle{
+    color: #fff;
+    background-color: none !important;
+    border-color: none !important;
+}
+.dropdown:hover{
+    background: #fff;
+    color: red;
+}
+
+.head{
+    margin-bottom: 0px;
+
+}
+
+.navList {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    justify-content: flex-end;
+    padding-top: 5px;
+
+}
+.list_div{
+    display: flex;
+    justify-content: flex-end;
+    flex: auto;
+    padding-top: 20px;
+}
+.navItem {
+    color: #000000;
+    font-size: 20px;
+    margin-right: 1.3rem;
+    text-decoration: none;
+    padding-top: 5px;
+    font-family: serif;
+
+}
+
+.navItem:hover {
+    color: rgb(9, 5, 199);
+    text-decoration: none;
+    
+}
+
+.active-navItem {
+    color: rgba(0, 0, 0, 0.856);
+}
+
+.searchbar{
+    display: flex;
+    margin-top: 8px;
+}
+.logobar{
+    margin-top: -25px;
+    margin-left: 25px;
+    display: flex;
+}
+
+.dateTime{
+    font-size: 12px;
+    color: red;
+    font-family:'orbitron';
+}
+
+.scrollTop{
+    background: none;
+    color: #55b44c;
+    font-size: 40px;
+    position: fixed;
+    top: 87%;
+    left: 90%;
+    z-index: 1;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 13px 23px 0px #867272;
+}
+
+.scrollTop:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}

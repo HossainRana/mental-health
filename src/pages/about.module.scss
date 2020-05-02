@@ -1,0 +1,56 @@
+.bannerImg{
+    padding: 0;
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    background: url(../../static/mental-2301393_1920.jpg) center center;
+    height: 450px;
+}
+
+.bannerLabel{
+    font-size: 9rem;
+    text-align: center;
+    color: #000000b3;
+    padding-top: 5rem;
+    height: 100%;
+}
+
+.textStyle{
+    font-size: 14px;
+    font-family: sans-serif;
+    color: rgb(4, 61, 4);
+}
+
+.headingText{
+    font-size: .875rem;
+    font-weight: 700;
+    font-family: serif;
+    color: black;
+    margin-bottom: 0;
+}
+
+.imgDiv{
+    height: 200px;
+}
+
+.h1text{
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: serif;
+    color: #55b44c;
+    margin-bottom: 0em;
+}
+
+.htext{
+    font-size: 4rem;
+    font-weight: 300;
+    font-family: serif;
+    color: #00000075;
+    margin-bottom: 0em;
+}
+
+.img{
+    height: 123px;
+    width: 123px;
+    border-radius: 50%;
+}
