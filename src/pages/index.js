@@ -70,10 +70,10 @@ const IndexPage = () => {
                             <h5 style={{color:'#73ff73', fontSize:'3rem'}}><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
                             <p style={{color:'#fff', fontSize:'14px', fontWeight:'700'}}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
                         </div>
-                        <div className={indexstyle.leftside_input} style={{border:'1px solid green'}}>
+                        <div className={indexstyle.leftside_input} style={{border:'1px solid green',display:'flex' }}>
                             <input className={indexstyle.inputstyle} style={{height:'100%', border:'none'}} type="text"  placeholder="What are you looking for? " name="srch-term" id="srch-term"></input>
                             <FontAwesomeIcon icon={faSearch} style={{color:'green'}}/>
-                            <Link to='/contact'><button className={indexstyle._button} style={{width:'170px'}}>Find Here</button></Link>
+                            <Link to='/contact'><button className={indexstyle._button} style={{width:'170px', marginLeft:'20px', marginTop:'-1px'}}>Find Here</button></Link>
                         </div>
                     </div>
                 </Col>
