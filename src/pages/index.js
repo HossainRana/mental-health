@@ -57,22 +57,6 @@ const IndexPage = () => {
 `)
 
 
- function myFunction(index) {
-    if (index=== 1){
-        document.getElementById("Personal_Session")
-
-    }
-    if (index=== 2){
-        document.getElementById("Couple_Session")
-        
-    }
-    if (index=== 3){
-        
-    }
-    if (index=== 4){
-        
-    }
-  };
 
     return (
         
@@ -130,7 +114,7 @@ const IndexPage = () => {
                     <Row>
                         <Col md='6' style={{display:'flex', borderRight: '5px solid #0080000f'}}>
                             <Col>
-                                <Card onClick={myFunction(1)}  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} >
+                                <Card className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} >
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
@@ -149,7 +133,7 @@ const IndexPage = () => {
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
-                                <Card onClick={myFunction(2)} className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
+                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
@@ -170,7 +154,7 @@ const IndexPage = () => {
                                 </Card>
                             </Col>
                             <Col style={{marginTop:'2rem'}}>
-                                <Card onClick={myFunction(3)} className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
+                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
@@ -189,7 +173,7 @@ const IndexPage = () => {
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
-                                <Card onClick={myFunction(4)}  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
+                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
@@ -444,7 +428,7 @@ const IndexPage = () => {
                                     <div> 
                                 </div>
                             </div>
-                            <hr/>
+                            <hr style={{marginTop:'50px', marginBottom:'100px'}}/>
                             <div className={indexstyle.Carousel_div} style={{display:'flex'}}>
                                 <div>
                                     </div>
@@ -477,7 +461,7 @@ const IndexPage = () => {
                                     <div> 
                                 </div>
                             </div>
-                            <hr/>
+                            <hr style={{marginTop:'50px', marginBottom:'100px'}}/>
                             <div className={indexstyle.Carousel_div} style={{display:'flex'}}>
                                 <div>
                                     </div>
