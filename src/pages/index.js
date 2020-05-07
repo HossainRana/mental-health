@@ -72,7 +72,7 @@ const IndexPage = () => {
                         </div>
                         <div className={indexstyle.leftside_input} style={{border:'1px solid green',display:'flex' }}>
                             <input className={indexstyle.inputstyle} style={{height:'100%', border:'none'}} type="text"  placeholder="What are you looking for? " name="srch-term" id="srch-term"></input>
-                            <FontAwesomeIcon icon={faSearch} style={{color:'green'}}/>
+                            <FontAwesomeIcon icon={faSearch} style={{color:'green', marginTop:'12px'}}/>
                             <Link to='/contact'><button className={indexstyle._button} style={{width:'170px', marginLeft:'20px', marginTop:'-1px'}}>Find Here</button></Link>
                         </div>
                     </div>
