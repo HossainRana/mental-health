@@ -207,6 +207,7 @@ const IndexPage = () => {
                                         guideline which help you to devise a hypothesis for injury.
                                         </Card.Text>
                                         <button className={indexstyle._button}>Get Services</button>
+                                        
                                     </Card.Body>
                                 </Card>
                             </div>
@@ -286,7 +287,7 @@ const IndexPage = () => {
                     lag behind in family, social or developmental activities. But the overall development of the 
                     country is not possible by excluding a single population.</p>
                    </Col>
-                   <Col md='6' style={{height:'450px', border:'1px solid rgba(199, 182, 182, 0.12)', borderRadius:'5px'}}>
+                   <Col md='6' style={{height:'450px', border:'1px solid rgba(199, 182, 182, 0.12)', borderRadius:'5px', display:'none'}}>
                         {data.thumbnail.edges.map(edge =>{
                             return (
                                 <div style={{marginTop:'5px', width:'100%'}}> 
@@ -303,13 +304,25 @@ const IndexPage = () => {
                         })}
                         <Link to='/blog'><button className={indexstyle._button} style={{float:'right', marginRight:'20px', width:'100px', height:'30px'}}>show all</button></Link>
                    </Col>   
+                   <Col md='6' style={{height:'450px', border:'1px solid rgba(199, 182, 182, 0.12)', borderRadius:'5px'}}>
+                        <div style={{marginTop:'5px', width:'100%'}}> 
+                            <div style={{marginTop:'5px'}}>
+                                <img src='../../post.jpg' height="300" width="100%"/>
+                                              
+                            </div>
+                            <div style={{width:'100%'}}> 
+                                <p style={{marginLeft:'5px',fontSize:'16px',height:'20px'}}>Find Out The Difference Between A Therapist And A Psychologist</p>
+                                <Link ><button className={indexstyle._button} style={{float:'right', marginRight:'20px', width:'100px', height:'30px'}}>Read</button></Link>
+                            </div>
+                        </div>
+                        <Link to='/blog'><button className={indexstyle._button} style={{float:'right', marginRight:'20px', width:'100px', height:'30px'}}>show all</button></Link>
+                   </Col>   
                 </Row>
             </section>
             <section>
                 <Col>
                     <div style={{textAlign:'center'}}>
                         <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>WRITE US</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
                 </Col>
                 <section>

@@ -50,7 +50,7 @@ const Footer = () => {
                 </Col>
                 <Col>
                     <div  className={footerStyle.text}>
-                        <span>Contact Us</span> | 
+                        <span><Link  className={footerStyle.text} to='/contact'>Contact Us</Link></span> | 
                         <span> Our Locations</span> | 
                         <span> Follow Us:</span>
                         <span style={{marginTop:'10px'}}>
