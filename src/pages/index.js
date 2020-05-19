@@ -11,6 +11,9 @@ import 'typeface-orbitron'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faPhone, faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import Head from '../components/head'
+import StepWizard from 'react-step-wizard'
+import Left from '../components/left'
+import Right from '../components/right'
 
 const IndexPage = () => {
 
@@ -72,7 +75,7 @@ const IndexPage = () => {
                         </div>
                         <div className={indexstyle.leftside_input} style={{border:'1px solid green',display:'flex' }}>
                             <input className={indexstyle.inputstyle} style={{height:'100%', border:'none'}} type="text"  placeholder="What are you looking for? " name="srch-term" id="srch-term"></input>
-                            <FontAwesomeIcon icon={faSearch} style={{color:'green'}}/>
+                            <FontAwesomeIcon icon={faSearch} style={{color:'green', marginTop:'12px'}}/>
                             <Link to='/contact'><button className={indexstyle._button} style={{width:'170px', marginLeft:'20px', marginTop:'-1px'}}>Find Here</button></Link>
                         </div>
                     </div>
@@ -112,104 +115,13 @@ const IndexPage = () => {
 
                 <Container style={{paddingBottom:'50px'}}>
                     <Row>
-                        <Col md='6' style={{display:'flex', borderRight: '5px solid #0080000f'}}>
-                            <Col>
-                                <Card className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} >
-                                    <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
-                                        <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
-                                            <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
-                                                <div>
-                                                    <img src='../../mental-health-2310825_640.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                        </div>
-                                    </div> 
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Personal Session</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        In the private session, you will get a one-hour session conducting by an experienced physiologist
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
-                                    <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
-                                        <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
-                                            <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
-                                                <div>
-                                                    <img src='../../mindshaper6.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                        </div>
-                                    </div> 
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Couple Session</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        Are you facing bad times in your relationship? Just attend a session with our experienced physiologist.
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            <Col style={{marginTop:'2rem'}}>
-                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
-                                    <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
-                                        <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
-                                            <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
-                                                <div>
-                                                    <img src='../../mental-health-3350778_1280.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                        </div>
-                                    </div> 
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Child Therapy</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        Do your child began to act “out of character”? Has your child experienced any serious trauma recently?
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
-                                    <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
-                                        <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
-                                            <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
-                                                <div>
-                                                    <img src='../../anatomy-2952567_640.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                        </div>
-                                    </div> 
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Meditation</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        Meditation is helpful for those who are struggling with a generalized anxiety disorder. If you face anxiety disorder, just make a phone call to us.
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
+                        <Col md='6' style={{display:'flex'}}>
+                            <Left />
                         </Col>
-                        <Col md='6' className={indexstyle.serviceCard} style={{background:'#fff'}}>
-                            <div  className={`${indexstyle.activeCard}`}  id="Personal_Session" style={{marginTop:'12rem'}}>
-                                <Card className="text-center">
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Personal Session</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        We start with the individual assessment part where we asked you about your 
-                                        condition, history, and we will find out how it began, was it an accident or 
-                                        long term strain? Your medical history has also taken bt the physiotherapist. 
-                                        We will take care of everything to provide you with a safe and complete 
-                                        guideline which help you to devise a hypothesis for injury.
-                                        </Card.Text>
-                                        <button className={indexstyle._button}>Get Services</button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
+                        <Col md='6' className={indexstyle.serviceCard} style={{background:'#fff', transform:'none'}}>
+                            <Container  className={`${indexstyle.activeCard}`}  id="Personal_Session" style={{height:'100%'}}>
+                                <Right/>
+                            </Container>
                             <div  className={`${indexstyle.serviceCard} ${indexstyle.inactiveCard}`} id="Couple_Session"  style={{height:'100%'}}>
                                 <Card className="text-center" style={{height:'100%', paddingTop:'12rem'}}>
                                     <Card.Body>
@@ -428,7 +340,7 @@ const IndexPage = () => {
                                     <div> 
                                 </div>
                             </div>
-                            <hr style={{marginTop:'50px', marginBottom:'100px'}}/>
+                            <hr style={{marginTop:'30px', marginBottom:'60px'}}/>
                             <div className={indexstyle.Carousel_div} style={{display:'flex'}}>
                                 <div>
                                     </div>
@@ -461,7 +373,7 @@ const IndexPage = () => {
                                     <div> 
                                 </div>
                             </div>
-                            <hr style={{marginTop:'50px', marginBottom:'100px'}}/>
+                            <hr style={{marginTop:'30px', marginBottom:'60px'}}/>
                             <div className={indexstyle.Carousel_div} style={{display:'flex'}}>
                                 <div>
                                     </div>
