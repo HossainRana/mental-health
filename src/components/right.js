@@ -10,16 +10,12 @@ const Right = () => {
     <div>
         <Container>
             <Card className="text-center" style={{border:'none', height:'100%'}}>
-                <Card.Header style={{background:'#fff', color:'green'}}>{state.title}</Card.Header>
+                <Card.Header style={{background:'#fff', color:'green', fontSize: '40px', fontFamily: 'initial'}}>{state.title}</Card.Header>
                 <Card.Body>
                     <Card.Text>
                         
                         <p style={{fontSize:'16px'}}>{state.name}</p>
-                        <p>{state.Q1}</p>
-                        <p>{state.Q2}</p>
-                        <p>{state.Q3}</p>
-                        <p>{state.Q4}</p>
-                        <p>{state.Q5}</p>   
+                        <p>{state.initial}</p> 
 
                         <div>
                             <p>{state.booking}</p>

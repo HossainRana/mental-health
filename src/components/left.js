@@ -227,7 +227,7 @@ const Left = () => {
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
                                                 <div>
-                                                    <img src='../../anatomy-2952567_640.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
+                                                    <img src='../../relax.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
                                                 </div>
                                             </div>
                                         </div>

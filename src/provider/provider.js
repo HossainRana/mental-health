@@ -8,12 +8,23 @@ export const GlobalDispatchContext = React.createContext();
 
 const initialState = {
     title: "Welcome!",
-    name: "What Bring you here?",
     Q1: "Increase Happiness",
     Q2: "Reduce Stress",
     Q3: "Cop Up Depression",
     Q4: "Better Sleep",
-    Q5: <Button>Continue</Button>
+    Q5: <Button>Continue</Button>,
+    initial: <section>
+        <Row>
+            <Col>
+                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>What Bring you here?</p>
+                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Increase Happiness</p>
+                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Reduce Stress</p>
+                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Cop Up Depression</p>
+                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Better Sleep</p>
+                <h1 style={{color: 'green', fontFamily: 'initial'}}>Choose Your Services</h1>
+            </Col>
+        </Row>
+    </section>
 
 };
 
