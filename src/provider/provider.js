@@ -1,17 +1,39 @@
 import React from "react"
+import 'bootstrap/dist/css/bootstrap.css'
+import { Row, Col, Card, Button, Container} from 'react-bootstrap'
+import { faAudioDescription } from "@fortawesome/free-solid-svg-icons";
 
 export const GlobalStateContext = React.createContext();
 export const GlobalDispatchContext = React.createContext();
 
 const initialState = {
-    name: "Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.",
-    title: "Choose your Services here",
+    title: "Welcome!",
+    name: "What Bring you here?",
+    Q1: "Increase Happiness",
+    Q2: "Reduce Stress",
+    Q3: "Cop Up Depression",
+    Q4: "Better Sleep",
+    Q5: <Button>Continue</Button>
+
 };
 
 function update(state, action) {
     return {
         name: action.type,
         title: action.title,
+        bookingHeading: action.bookingHeading,
+        subHeading: action.subHeading,
+        online: action.online,
+        offline: action.offline,
+        demo: action.demo,
+        demoOnline: action.demoOnline,
+        booking: action.booking,
+        Break: action.Break,
+        talk: action.talk,
+        image1: action.image1,
+        image2: action.image2,
+        card: action.card,
+        text: action.text,
     }
 };
 

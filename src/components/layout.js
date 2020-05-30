@@ -7,6 +7,7 @@ import Provider from '../provider/provider'
 
 const Layout = (props) =>{
     return(
+        
         <Provider>
             <div className={layoutStyle.container} >
                 <div className={layoutStyle.content}>

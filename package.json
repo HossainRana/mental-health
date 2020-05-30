@@ -33,6 +33,7 @@
     "gatsby-transformer-remark": "^2.6.52",
     "gatsby-transformer-sharp": "^2.3.14",
     "helmet": "^3.22.0",
+    "material-ui": "^0.20.2",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.28",
     "node-sass": "^4.13.0",

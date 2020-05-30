@@ -14,7 +14,25 @@ const Left = () => {
                         <Col>
                             <button className={indexstyle.serviceButton} style={{border:'none', padding:'0'}} onClick={
                                 () => {
-                                    dispatch({type: "You want to book an Appoinment", title: "Book An Appointment"});
+                                    dispatch({title: "Book An Appointment",                               
+                                    booking: (
+                                        <section>
+                                            <div>
+                                                <p style={{fontSize: '25px', color:'green', fontFamily: 'initial'}}>Hey, You can talk professional licensed Therapist in our Network</p>
+                                                <p style={{fontSize: '25px', color:'green', fontFamily: 'initial'}}>How do you want to take session?</p>
+                                            </div>
+                                            <div style={{marginTop:'50px'}}>
+                                                <Row style={{justifyContent: 'center'}}>
+                                                    <Button style={{background: 'green', border: 'none'}}>Online</Button>
+                                                </Row>
+                                                <Row style={{justifyContent: 'center', marginTop:'20px'}}>
+                                                    <Button style={{background: 'green', border: 'none'}}>Offline</Button>
+                                                </Row>
+                                            </div>
+                                        </section>
+                                    )
+
+                                });
                                 }
                             }>
                                 <Card className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} >
@@ -22,7 +40,7 @@ const Left = () => {
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
                                                 <div>
-                                                    <img src='../../mental-health-2310825_640.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
+                                                    <img src='../../booking.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
                                                 </div>
                                             </div>
                                         </div>
@@ -39,7 +57,36 @@ const Left = () => {
                             </button>
                             <button className={indexstyle.serviceButton} style={{border:'none', padding:'0'}} onClick={
                                 () => {
-                                    dispatch({type: "Let's Take a Break", title: "Take a Break"});
+                                    dispatch({title: "Take a Break",
+
+                                    Break: (
+                                        <section>
+                                            <Row>
+                                                <Col>
+                                                    <Card>
+                                                        <Card>
+                                                            <Card.Text>
+                                                                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Exercise</p>
+                                                                <p style={{fontSize: '14px', color: 'green', fontFamily: 'initial', marginTop: '-30px'}}>(Yoga, Meditation)</p>
+                                                            </Card.Text>
+                                                        </Card>
+                                                    </Card>
+                                                </Col>
+                                            </Row> 
+                                            <Row style={{marginTop: '20px'}}>
+                                                <Col>
+                                                    <Card>
+                                                        <Card>
+                                                            <Card.Text>
+                                                                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Photos & Videos</p>
+                                                            </Card.Text>
+                                                        </Card>
+                                                    </Card>
+                                                </Col>
+                                            </Row> 
+                                        </section>
+                                    )
+                                });
                                 }
                             }>
                                 <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
@@ -68,7 +115,34 @@ const Left = () => {
                         <Col>
                             <button className={indexstyle.serviceButton} style={{border:'none', padding:'0'}} onClick={
                                 () => {
-                                    dispatch({type: "You want to Talk to Someone", title:"Talk to Someone"});
+                                    dispatch({title: "Talk to Someone",
+                                
+                                    talk: (
+                                        <section>
+                                            <Row>
+                                                <Col>
+                                                    <img style={{height:'70px', width:'70px'}} src='../../find.png'/>                                                    
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop: '20px'}}>
+                                                <Col>
+                                                    <Button style={{background: 'green', border: 'none'}}>Find Friend</Button>                                                    
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop: '50px'}}>
+                                                <Col>
+                                                    <img style={{height:'70px', width:'70px'}} src='../../listener.png'/>                                                    
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop: '20px'}}>
+                                                <Col>
+                                                    <Button style={{background: 'green', border: 'none'}}>Find a Listener</Button>                                                    
+                                                </Col>
+                                            </Row>
+                                        </section>
+                                    )
+                                
+                                });
                                 }
                             }>
                                 <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
@@ -76,7 +150,7 @@ const Left = () => {
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
                                                 <div>
-                                                    <img src='../../mental-health-3350778_1280.png' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
+                                                    <img src='../../conversation.jpeg' style={{height:'80px', width:'80px', objectFit:'contain', borderRadius:'50%', textAlign:'center' }}/>
                                                 </div>
                                             </div>
                                         </div>
@@ -94,7 +168,58 @@ const Left = () => {
 
                             <button className={indexstyle.serviceButton} style={{border:'none', padding:'0'}} onClick={
                                 () => {
-                                    dispatch({type: "Hear some Relaxation Music", title: "Relaxation Music"});
+                                    dispatch({ title: "Relaxation Music", card:
+                                    
+                                    
+                                    (
+                                        <section>
+                                            <Row>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Sleeping Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Col>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Cool Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>                                            
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop:'20px'}}>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Running Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Col>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>More Category</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>                                            
+                                                </Col>
+                                            </Row>
+                                            <h5 style={{marginTop:'50px'}}>15 Days free, No Payment No Credit Card Required</h5>
+                                            <Button style={{background:'green', border:'none'}}>Subscribe</Button>
+                                        </section>
+                                    ),
+                                
+                                
+                                });
                                 }
                             }>
                                 <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>

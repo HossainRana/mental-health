@@ -14,6 +14,7 @@ import Head from '../components/head'
 import StepWizard from 'react-step-wizard'
 import Left from '../components/left'
 import Right from '../components/right'
+import Booking from '../components/bookingservices'
 
 const IndexPage = () => {
 
@@ -122,54 +123,6 @@ const IndexPage = () => {
                             <Container  className={`${indexstyle.activeCard}`}  id="Personal_Session" style={{height:'100%'}}>
                                 <Right/>
                             </Container>
-                            <div  className={`${indexstyle.serviceCard} ${indexstyle.inactiveCard}`} id="Couple_Session"  style={{height:'100%'}}>
-                                <Card className="text-center" style={{height:'100%', paddingTop:'12rem'}}>
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Couple Session</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        We focus on positives as well as negatives too. It will help you with all 
-                                        types of resolve conflicts and improve your relationships. You can make 
-                                        thoughtful decisions about heightening and build up your relationship. 
-                                        After attending the session, you'll learn how to identify problems without 
-                                        blame and instead examine how things can be improved.
-                                        </Card.Text>
-                                        <button className={indexstyle._button}>Get Services</button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-                            <div  className={`${indexstyle.serviceCard} ${indexstyle.inactiveCard}`} id="Child_Therapy"  style={{height:'100%'}}>
-                                <Card className="text-center" style={{height:'100%', paddingTop:'12rem'}}>
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Child Therapy</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        First, our professional diagnose the element that is affecting your child.
-                                         It could be valuable for children who suffer from obsessive-compulsive 
-                                         disorder, post-traumatic stress disorder. This therapy will be also 
-                                         helpful for general anxiety disorder. Some common sign of distress - 
-                                         Unprovoked aggression, Constant worry and anxiety, Low grades or a sudden 
-                                         academic decline, Spending most of time alone etc.
-                                        </Card.Text>
-                                        <button className={indexstyle._button}>Get Services</button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-                            <div  className={`${indexstyle.serviceCard} ${indexstyle.inactiveCard}`} id="Meditation"  style={{height:'100%'}}>
-                                <Card className="text-center" style={{height:'100%', paddingTop:'12rem'}}>
-                                    <Card.Body>
-                                        <Card.Title className={indexstyle.serviceCard_title}>Meditation</Card.Title>
-                                        <Card.Text className={indexstyle.serviceCard_text}>
-                                        If you suffered from chronic anxiety and insomnia, our meditation therapy 
-                                        would help you to reduce that. “Researchers from Johns Hopkins University 
-                                        in Baltimore, MD sifted through nearly 19,000 meditation studies, they 
-                                        found 47 trials that addressed those issues and met their criteria for 
-                                        well-designed studies. Their findings, published in JAMA Internal Medicine, 
-                                        suggest that mindful meditation can help ease psychological stresses like 
-                                        anxiety, depression, and pain.”
-                                        </Card.Text>
-                                        <button className={indexstyle._button}>Get Services</button>
-                                    </Card.Body>
-                                </Card>
-                            </div>
                         </Col>
                     </Row>
                 </Container>
@@ -405,6 +358,7 @@ const IndexPage = () => {
                         
                     </Carousel>
                 </Container>
+                
             </section>
         </Layout>
         
