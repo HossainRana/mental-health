@@ -3,10 +3,7 @@ import { GlobalDispatchContext } from "../provider/provider"
 import 'bootstrap/dist/css/bootstrap.css'
 import { Row, Col, Nav, Card, Button, Form, Container} from 'react-bootstrap'
 import indexstyle from '../pages/index.module.scss'
-import Booking from '../components/Booking/booking'
-import TakeBreak from '../components/takeBreak/takeBreak'
-import Talk from '../components/Talk/talkToSomeone'
-import Relaxation from '../components/Relaxation/relaxation'
+import UserForm from '../components/UserForm'
 
 const Left = () => {
     const dispatch = useContext(GlobalDispatchContext);
@@ -20,7 +17,24 @@ const Left = () => {
                                 () => {
                                     dispatch({title: "Book An Appointment",                               
                                     booking: (
-                                        <Booking/>
+                                        <section>
+                                            <div>
+                                                <p style={{fontSize: '25px', color:'green', fontFamily: 'initial'}}>Hey, You can talk professional licensed Therapist in our Network</p>
+                                                <p style={{fontSize: '25px', color:'green', fontFamily: 'initial'}}>How do you want to take session?</p>
+                                            </div>
+                                            <div style={{marginTop:'50px'}}>
+                                                <Row style={{justifyContent: 'center'}}>
+                                                    <Button style={{background: 'green', border: 'none'}}>Online</Button>
+                                                </Row>
+                                                <Row style={{justifyContent: 'center', marginTop:'20px'}}>
+                                                    <Button style={{background: 'green', border: 'none'}}>Offline</Button>
+                                                </Row>
+                                                <Row>
+                                                    <UserForm/>
+                                                    <h1>Hello</h1>
+                                                </Row>
+                                            </div>
+                                        </section>
                                     )
 
                                 });
@@ -54,7 +68,25 @@ const Left = () => {
                                         <section>
                                             <Row>
                                                 <Col>
-                                                    <TakeBreak/>
+                                                    <Card>
+                                                        <Card>
+                                                            <Card.Text>
+                                                                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Exercise</p>
+                                                                <p style={{fontSize: '14px', color: 'green', fontFamily: 'initial', marginTop: '-30px'}}>(Yoga, Meditation)</p>
+                                                            </Card.Text>
+                                                        </Card>
+                                                    </Card>
+                                                </Col>
+                                            </Row> 
+                                            <Row style={{marginTop: '20px'}}>
+                                                <Col>
+                                                    <Card>
+                                                        <Card>
+                                                            <Card.Text>
+                                                                <p style={{fontSize: '25px', color: 'green', fontFamily: 'initial'}}>Photos & Videos</p>
+                                                            </Card.Text>
+                                                        </Card>
+                                                    </Card>
                                                 </Col>
                                             </Row> 
                                         </section>
@@ -91,7 +123,28 @@ const Left = () => {
                                     dispatch({title: "Talk to Someone",
                                 
                                     talk: (
-                                        <Talk/>
+                                        <section>
+                                            <Row>
+                                                <Col>
+                                                    <img style={{height:'70px', width:'70px'}} src='../../find.png'/>                                                    
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop: '20px'}}>
+                                                <Col>
+                                                    <Button style={{background: 'green', border: 'none'}}>Find Friend</Button>                                                    
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop: '50px'}}>
+                                                <Col>
+                                                    <img style={{height:'70px', width:'70px'}} src='../../listener.png'/>                                                    
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop: '20px'}}>
+                                                <Col>
+                                                    <Button style={{background: 'green', border: 'none'}}>Find a Listener</Button>                                                    
+                                                </Col>
+                                            </Row>
+                                        </section>
                                     )
                                 
                                 });
@@ -124,10 +177,73 @@ const Left = () => {
                                     
                                     
                                     (
-                                        <section>
-                                            <Relaxation/>
+                                        <section id='pan-1'>
+                                            <Row>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Sleeping Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Col>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Cool Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>                                            
+                                                </Col>
+                                            </Row>
                                         </section>
-                                    ),      
+                                        <section id='pan-2'>
+                                            <Row>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Sleeping Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Col>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Cool Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>                                            
+                                                </Col>
+                                            </Row>
+                                            <Row style={{marginTop:'20px'}}>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>Running Music</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Col>
+                                                <Col md='6'>
+                                                    <Card>
+                                                        <Card.Body>
+                                                            <Card.Text>
+                                                                <h5>More Category</h5>
+                                                            </Card.Text>
+                                                        </Card.Body>
+                                                    </Card>                                            
+                                                </Col>
+                                            </Row>
+                                            <h5 style={{marginTop:'50px'}}>15 Days free, No Payment No Credit Card Required</h5>
+                                            <Button style={{background:'green', border:'none'}}>Subscribe</Button>
+                                        </section>
+                                    ),
                                 
                                 
                                 });

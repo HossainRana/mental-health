@@ -14,7 +14,6 @@ import Head from '../components/head'
 import StepWizard from 'react-step-wizard'
 import Left from '../components/left'
 import Right from '../components/right'
-import Booking from '../components/bookingservices'
 
 const IndexPage = () => {
 
