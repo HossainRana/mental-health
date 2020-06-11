@@ -26,7 +26,7 @@ const Left = () => {
                                 });
                                 }
                             }>
-                                <Card className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} >
+                                <Card className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} title='Click for Booking service!'>
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
@@ -62,7 +62,7 @@ const Left = () => {
                                 });
                                 }
                             }>
-                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
+                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} title='Click for Take a Break service!'>
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
@@ -97,7 +97,7 @@ const Left = () => {
                                 });
                                 }
                             }>
-                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
+                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} title='Click for Talk to Someone service!'>
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
@@ -133,7 +133,7 @@ const Left = () => {
                                 });
                                 }
                             }>
-                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`}>
+                                <Card  className={`${indexstyle.serviceCard} ${indexstyle.left_servicecard}`} title='Click for Relaxation Music service!'>
                                     <div style={{display:'flex', justifyContent:'center', marginTop:'10px'}}>
                                         <div style={{background:'transparent', height:'122px', width:'122px', borderRadius:'50%', border:'1px solid #0080001a', textAlign:'center', padding:'10px'}}>
                                             <div style={{background:'transparent', height:'101px', width:'101px', borderRadius:'50%', border:'1px solid #00800059', textAlign:'center', padding:'10px'}}>
