@@ -11,7 +11,6 @@ import 'typeface-orbitron'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faPhone, faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import Head from '../components/head'
-import StepWizard from 'react-step-wizard'
 import Left from '../components/left'
 import Right from '../components/right'
 
