@@ -69,7 +69,7 @@ const IndexPage = () => {
                 <Col md='6'>
                     <div style={{marginLeft:'15px', width:'80%', paddingTop:'20%'}}>
                         <div>
-                            <h5 style={{color:'#73ff73', fontSize:'3rem'}}><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
+                            <h5 style={{color:'#73ff73', fontSize:'3rem'}}><p>Be Calm.</p><p>Life is tough,</p><p>But so you.</p>                            </h5>
                             <p style={{color:'#fff', fontSize:'14px', fontWeight:'700'}}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
                         </div>
                         <div className={indexstyle.leftside_input} style={{border:'1px solid green',display:'flex' }}>
