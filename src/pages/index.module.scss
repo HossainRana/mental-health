@@ -3,7 +3,7 @@
     background-attachment: fixed;
     object-fit: cover;
     background-repeat: no-repeat;
-    height: 665px;
+    height: 720px;
     object-fit: cover;
 }
 
@@ -33,6 +33,19 @@
     margin-right: 50px;
 }
 
+.baner_bottom__img{
+    height: 18px;
+    margin: 10px 0 0 20px;
+}
+
+.banner_bottom__noticetext{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 7px;
+    margin-left: 10px;
+    font-family: initial;
+}
 .navItem {
     color: #2db34b;
     font-size: 14px;
@@ -328,4 +341,39 @@
 
 .serviceButton:focus {
     outline: 0;
+}
+
+.issue_name_design{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    color: white;
+    background: rgba(42, 98, 17, 0.6);
+    text-align: center;
+}
+
+.issue_name_design:hover{
+    background: rgba(46, 134, 5, 0.6);
+    cursor: pointer;
+}
+
+.img_responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.text_design{
+    position: relative;
+    top: 40%;
+    font-size: 24px;
+}
+
+.heading_deasign{
+    color: #5faa41;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.4em;
+    text-align: center;
 }
