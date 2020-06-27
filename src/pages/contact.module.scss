@@ -47,3 +47,37 @@
     width:70px;
     float: right;
 }
+
+.contact_card__design{
+    box-shadow: 0 3px 5px 0 rgba(154,160,185,.05), 0 10px 20px 0 rgba(166,173,201,.2);
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.contact_1stCol__design{
+    height: 385px;
+    width: 315px;
+    border-top: 8px solid #adadf9;
+    margin-top: 26px;
+}
+
+.contact_2ndCol__design{
+    height: 437px;
+    width: 345px;
+    margin-right: 25px;;
+    border-top: 8px solid #5fc49b;
+}
+
+.contact_card__button{
+    background: #fff;
+    border: 1px solid #5050b5;
+    width: 200px;
+    border-radius: 50px;
+    height: 35px;
+    margin-top: 25px;
+}
+
+.contact_card__button:focus{
+    outline: none;
+}

@@ -38,13 +38,13 @@ const Header = () =>{
             window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-                document.getElementById("nav-header").style.background = '#fff'
-            }
-            else {
-                document.getElementById("nav-header").style.background  = 'none'
-            }
-            
+              if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("nav_header").style.padding = "10px 10px";
+                document.getElementById("logo").style.fontSize = "25px";
+              } else {
+                document.getElementById("nav_header").style.padding = "20px 10px";
+                document.getElementById("logo").style.fontSize = "35px";
+              }
             }
         }
 
@@ -52,10 +52,10 @@ const Header = () =>{
 
     return (
 
-        <header className={headerStyle.header} id="nav-header">
+        <header className={headerStyle.header} id="nav_header">
             <Nav>
                 <div>
-                    <Link to='/'><img style={{margin: '5px'}} src ={'../../mindShaper.png'} alt="Logo" height="70px" width="100px"/></Link>
+                    <Link to='/'><img id='logo' style={{margin: '5px'}} src ={'../../mindShaper.png'} alt="Logo" height="70px" width="100px"/></Link>
                 </div>
                 <div className={headerStyle.list_div}>
                     <ul className={headerStyle.navList}>

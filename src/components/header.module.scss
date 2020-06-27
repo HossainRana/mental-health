@@ -1,11 +1,26 @@
 .header{
 
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 255);
     display: block;
     width: 100%;
     position: fixed;
     z-index: 9999;
     margin-right: 50px;
+}
+
+#nav_header{
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+#nav_header #logo{
+    height:70px;
+    width:100px;
 }
 
 .dropdown{
