@@ -73,7 +73,7 @@ const IndexPage = () => {
                         <p style={{marginBottom: '0'}}>
                             <a href="mailto:mindshaper.life@gmail.com" style={{color:'green'}}> mindshaper.life@gmail.com</a>
                         </p>
-                        <p>
+                        <p style={{height: '18px', minWidth: '18px'}}>
                             <FontAwesomeIcon icon={faPhone} style={{color:'green', marginRight:'10px'}}/>
                             +88 096 66 77 12 12
                         </p>
