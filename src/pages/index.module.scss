@@ -1,0 +1,429 @@
+.header_background{
+    background: url(../../static/images/leaves-2333307_1920.jpg) center center;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    height: 720px;
+    object-fit: cover;
+}
+
+.background_color__even{
+    background: #f9faff;
+}
+
+.background_color__odd{
+    background: #ffffff;
+}
+.list_div{
+    display: flex;
+    justify-content: flex-end;
+    flex: auto;
+    padding-top: 20px;
+}
+
+.navList {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    justify-content: flex-end;
+    padding-top: 5px;
+
+}
+
+.header{
+
+    background: rgb(255, 255, 255);
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 1;
+    margin-right: 50px;
+}
+
+.baner_bottom__img{
+    height: 18px;
+    margin: 10px 0 0 20px;
+}
+
+.banner_bottom__noticetext{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 7px;
+    margin-left: 10px;
+    font-family: initial;
+}
+.navItem {
+    color: #2db34b;
+    font-size: 14px;
+    margin-right: 1.3rem;
+    text-decoration: none;
+    padding-top: 5px;
+    font-family: 'orbitron'
+}
+
+.navItem:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.active-navItem {
+    color: rgba(0, 26, 255, 0.856);
+    opacity: 1;
+}
+
+.right_sideslide_text{
+    font-size: 17px;
+    color: #55b44c;
+    font-weight: 400;
+    font-family: sans-serif;
+    margin-left: 10px;
+    padding-top: 30px;
+}
+
+.leftside_input{
+    height: 45px;
+    width: 247px;
+    background: #fff;
+}
+
+.inputstyle:active{
+
+}
+._button{
+    margin-top: 5px;
+    background: #2db34b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    margin-left: 10px;
+}
+
+.feature_cardbackground{
+    height: 100%;
+    width: 100%;
+}
+.sliderbackground{
+    background: #ffffff59;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+
+}
+.sectionbackground{
+    background: url(../../static/beach.jpg) center center;
+    background-repeat: no-repeat;
+    height: auto;
+
+}
+
+.feature_card1{
+    width: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.feature_card2{
+    width: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.feature_card3{
+    width: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.card{
+    background: none;
+    width: 100%;
+}
+.feature_card1:hover{
+    transform: scale(1.04);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.feature_card2:hover{
+    transform: scale(1.04);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.feature_card3:hover{
+    transform: scale(1.04);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+.card_text{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card_title{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sectionBackground2{
+    background: url('../../static/drop.jpg');
+    height: 350px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.heading{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+}
+
+.aboutus_text{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sectionBackground3{
+    background: url('../../static/brain-3446307_1920.jpg') center center;
+    height: 350px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.Carousel_div{
+    width: 100%;
+    text-align: left;
+}
+
+.Carousel_text{
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000;
+}
+
+.Carousel_img{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+
+.sectionBackground4{
+    background: rgba(255, 255, 255, 0.11);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    padding-top: 30px;
+}
+
+.sectionBackground5{
+    background: url('../../static/beauty-354565_1920.jpg' ) center center;
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.social_icon{
+    height: 25px;
+    width: 25px;
+    margin-left: 15px;  
+}
+
+.card_body{
+    background: #ffffff59;
+    border-radius: 10px;
+    height: 350px;
+}
+
+.price_card__title{
+    background:#ed964d;
+    color: #fff;
+    text-align: center;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.price_card__body{
+    font-family: 'orbitron';
+    padding-top: 30px;
+    color: green;
+}
+
+.price_card_button{
+    margin-top: 20px;
+    background: #ed964d;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+}
+
+.price_card_button:hover{
+    transform: scale(1.1);
+    transition-duration: .5s;
+}
+
+.pText{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.serviceCard{
+    border-radius: 5px;
+}
+
+.serviceCard:hover{
+    transform: scale(1.01);
+    transition-duration: .4s;
+    cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+.serviceCard_title{
+    font-size: 14px;
+    color: green;
+    font-weight: 600;
+}
+
+.serviceCard_text{
+    font-size: 12px;
+    color: green;
+    font-weight: 300;
+}
+
+._bbutton{
+    display: none;
+    margin-top: 5px;
+    background: #2db34b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+}
+
+._bbutton:hover{
+    display: block;
+}
+
+
+.inactiveCard{
+    display: none !important;
+}
+
+.activeCard{
+    display: block !important;
+}
+
+.textStyle{
+    font-size: 14px;
+    font-family: sans-serif;
+    color: rgb(4, 61, 4);
+}
+
+.Carousel_text__name{
+    font-size: 14px;
+    font-family: sans-serif;
+    margin: 0;
+}
+.Carousel_text__position{
+    font-size: 12px;
+    font-family: initial;
+    margin: 0;
+}
+
+.left_servicecard{
+    width: 100%;
+    text-align: center;
+}
+
+.serviceButton:focus {
+    outline: 0;
+}
+
+.issue_name_design{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    color: white;
+    background: rgba(42, 98, 17, 0.6);
+    text-align: center;
+}
+
+.issue_name_design:hover{
+    background: rgba(46, 134, 5, 0.6);
+    cursor: pointer;
+}
+
+.img_responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.text_design{
+    position: relative;
+    top: 40%;
+    font-size: 24px;
+}
+
+.heading_deasign{
+    color: #5faa41;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.contact_1stCard__Design{
+    height: 385px;
+    width: 315px;
+    background: #fff;
+    box-shadow: 0 3px 5px 0 rgba(154,160,185,.05), 0 10px 20px 0 rgba(166,173,201,.2);
+    margin: 34px;
+    border-radius: 8px;
+    border-top: 8px solid #9696f5;
+}
+
+.contact_2ndCard__Design{
+    height: 437px;
+    width: 345px;
+    background: #fff;
+    box-shadow: 0 3px 5px 0 rgba(154,160,185,.05), 0 10px 20px 0 rgba(166,173,201,.2);
+    border-radius: 8px;
+    border-top: 8px solid #5fc49b;
+}
+
+.contact_card__text{
+    padding: 40px;
+    height: 260px;
+    color: #9696f1;
+}
+
+.contact_card__textMiddle{
+    padding: 40px;
+    height: 295px;
+    color: #9696f1;
+}
+
+.cantact_card__button{
+    background: #fff;
+    border: 1px solid #9696f1;
+    border-radius: 50px;
+    height: 35px;
+    width: 200px;
+    margin-top: 15px;
+}
+
+.cantact_card__button:focus{
+    outline: none;
+}

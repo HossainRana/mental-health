@@ -73,11 +73,6 @@ const IndexPage = () => {
                             <h5 style={{color:'#73ff73', fontSize:'3rem'}}><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
                             <p style={{color:'#fff', fontSize:'14px', fontWeight:'700'}}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
                         </div>
-                        <div className={indexstyle.leftside_input} style={{border:'1px solid green',display:'flex' }}>
-                            <input className={indexstyle.inputstyle} style={{height:'100%', border:'none'}} type="text"  placeholder="What are you looking for? " name="srch-term" id="srch-term"></input>
-                            <FontAwesomeIcon icon={faSearch} style={{color:'green', marginTop:'12px'}}/>
-                            <Link to='/contact'><button className={indexstyle._button} style={{width:'170px', marginLeft:'20px', marginTop:'-1px'}}>Find Here</button></Link>
-                        </div>
                     </div>
                 </Col>
 
@@ -87,26 +82,38 @@ const IndexPage = () => {
             </Row>
             <Row style={{background:'rgba(255, 255, 255, 0.5)', margin:'-55px 0px 0px 0px', height:'55px'}}>
                 <Col md='6'>
-                    <div>
-                        <div style={{display:'flex', paddingTop:'10px'}}>
-                            <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial'}}>Notice:</p>
-                            <p style={{fontSize:'14px',fontWeight:'400',marginBottom:'0',marginTop:'7px',marginLeft:'10px', fontFamily:'initial'}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div style={{display:'flex',margin: '10px 0'}}>
+                        <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial'}}>Notice:</p>
+                        <div className={indexstyle.banner_bottom__noticetext}> 
+                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </Col>
-                <Col md='6' style={{textAlign:'center'}}>
+                <Col md='6' style={{textAlign:'center',}}>
                     <div>
                         <div style={{display:'flex', paddingTop:'10px', justifyContent:'center'}}>
-                            <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial'}}>Links:</p>
-                            <span style={{marginTop:'7px'}}>
-                                <a target="_blank" href='https://www.facebook.com/mindshaper.xyz'><span><img className={indexstyle.social_icon} style={{marginTop:'-4px'}} src="../../social_icon/facebook.svg"/></span></a>
-                            </span>
+                            <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/nytimes.png?v=25'/>
+                            <Link to='/newsection' >
+                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/wsj.png?v=25'/>
+                            </Link>
+                            <Link to='/' >
+                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/self.png?v=25'/>
+                            </Link>
+                            <Link to='/' >
+                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/fox.png?v=25'/>
+                            </Link>
+                            <Link to='/' >
+                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/chicagotribune.png?v=25'/>
+                            </Link>
+                            <Link to='/' >
+                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/entrepeneur.png?v=25'/>
+                            </Link>
                         </div>
                     </div>
                 </Col>
             </Row>
-            <section style={{marginTop:'50px'}}>
-                <Col style={{textAlign:'center'}}>
+            <section className={indexstyle.background_color__even}>
+                <Col style={{textAlign:'center', paddingTop: '50px'}}>
                     <div>
                         <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>SERVICES</h1>
                     </div>
@@ -127,8 +134,8 @@ const IndexPage = () => {
                 </Container>
             </section>
 
-            <section>
-                <Col style={{textAlign:'center'}}>
+            <section className={indexstyle.background_color__odd}>
+                <Col style={{textAlign:'center', paddingTop: '50px'}}>
                     <div>
                         <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>ARTICLES</h1>
                     </div>
@@ -182,43 +189,50 @@ const IndexPage = () => {
                    </Col>   
                 </Row>
             </section>
-            <section>
+            <section className={indexstyle.background_color__even}>
                 <Col>
-                    <div style={{textAlign:'center'}}>
+                    <div style={{textAlign:'center', paddingTop: '50px'}}>
                         <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>WRITE US</h1>
                     </div>
                 </Col>
-                <section>
-                    <Row style={{margin:'15px'}}>
-                        <Col md='5'>
-                            <div style={{textAlign:'center', marginTop:'8rem'}}>
-                                <h1 style={{fontSize:'3rem', fontFamily:'initial', color:'#008000a8', margin:'0' }}>THANK YOU</h1>
-                                <p style={{fontSize:'15xp', fontFamily:'initial', color:'#008000a8', margin:'0' }}>Stay Connected with Us</p>
+                
+                <Container style={{padding: '50px 0 '}}>
+                    <Row>
+                        <Col className={`${indexstyle.contact_1stCard__Design}`}>
+                            <div className={`${indexstyle.contact_card__text}`}>
+                                <h2 style={{color: 'black'}}>Press</h2>
+                                <p>Are you interested in our latest news or working on a Grammarly story and need to get in touch?</p>
+                            </div>
+                            <div style={{textAlign: 'center'}}>
+                                <button className={indexstyle.cantact_card__button}>Visit Press Page</button>
                             </div>
                         </Col>
-                        <Col md='7'>
-                            <Form>
-                                <Form.Group>
-                                    <Form.Control type="name" placeholder="Your name" />
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Control type="email" placeholder="Your email" />
-                                </Form.Group>   
-                                <Form.Group>
-                                    <Form.Control type="email" placeholder="Contact number" />
-                                </Form.Group>   
-                                <Form.Group>
-                                    <Form.Label></Form.Label>
-                                    <textarea rows="10" cols="50" style={{width:'100%'}}></textarea>
-                                </Form.Group>   
-                            </Form>
-                            <button className={indexstyle._button} style={{width:'170px', float:'right'}}> Submit</button>
+                        <Col>
+                            <div className={`${indexstyle.contact_2ndCard__Design}`}>
+                                <div className={`${indexstyle.contact_card__textMiddle}`}>
+                                    <h2 style={{color: 'black'}}>Help & Support</h2>
+                                    <p>Our support team is spread across the globe to give you answers fast.</p>
+                                </div>
+                                <div style={{textAlign: 'center'}}>
+                                    <button className={indexstyle.cantact_card__button} style={{background: '#5fc49b', color: '#fff', border: '1px solid #5fc49b'}}>Visit Support Page</button>
+                                    <p style={{color: '#5fc49b', fontSize: '10px', marginTop: '5px', fontWeight: 'bold'}}>SUBMIT A REQUEST</p>
+                                </div>
+                            </div>                            
+                        </Col>
+                        <Col className={`${indexstyle.contact_1stCard__Design}`}>
+                            <div className={`${indexstyle.contact_card__text}`}>
+                                <h2 style={{color: 'black'}}>Sales</h2>
+                                <p>Get in touch with our sales team to see how we can work together.</p>
+                            </div>
+                            <div style={{textAlign: 'center'}}>
+                                <Link to='/contact'><button className={indexstyle.cantact_card__button}>Contact Sales</button></Link>
+                            </div>
                         </Col>
                     </Row>
-                </section>
+                </Container>
             </section>
 
-            <section className={indexstyle.sectionBackground5} style={{padding:'0', marginTop:'50px'}}>
+            <section className={indexstyle.sectionBackground5} style={{padding:'0',}}>
                 <Col md='12' style={{background:'#55b44c7a', height:'100%'}}>
                     <Container style={{paddingTop:'100px', paddingLeft:'15px'}}>
                         <div style={{textAlign:'center', color:'#fff'}}>
@@ -280,9 +294,9 @@ const IndexPage = () => {
                 </Col>
             </section>
                             
-            <section className={indexstyle.sectionBackground4}>
+            <section className={indexstyle.background_color__even}>
                 <Col>
-                    <div style={{textAlign:'center'}}>
+                    <div style={{textAlign:'center', paddingTop: '50px'}}>
                         <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>CUSTOMER TESTIMONIALS</h1>
                     </div>
                 </Col>

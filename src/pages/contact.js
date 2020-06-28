@@ -13,7 +13,7 @@ const contact = () => {
 
         <Layout>
             <Head title="Contact"/>
-            <section className={style.background_image}>
+            <section className={style.background_image} style={{paddingTop: '60px', background: '#f9faff'}}>
                 <Container>
                     <Row style={{height:'100%', paddingTop:'120px', paddingBottom:'50px'}}>  
                         <Col md='2'></Col>              
