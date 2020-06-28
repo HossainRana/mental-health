@@ -83,6 +83,34 @@ const Modal_Section = () => {
                     </Col>
                 </Row>
             </Container>
+
+            <section style={{margin: '0 auto'}}>
+                
+                    <Col>
+                        <ul style={{position: 'relative', height: '800px', width: '1140px', margin: '0 auto'}}>
+                            <li style={{position: 'absolute', left: '0', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                                <img className={indexstyle.mosaic_grid__img}src='https://static.pxlecdn.com/photos/241018154/medium/a786fdd25f198f313d2f.jpg' />
+                            </li>
+                            
+                            <li style={{position: 'absolute', left: '190px', top: '0', height: '370px', width: '370px', listStyleType: 'none'}}>
+                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/308751433/medium/33c0e97ea330eafa73c1.jpg' />
+                            </li>
+
+                            <li style={{position: 'absolute', left: '570px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/295990323/medium/608702d59e732e697aed.jpg' />
+                            </li>
+
+                            <li style={{position: 'absolute', left: '760px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/228156418/medium/fa5aca47703177b35d8a.jpg' />
+                            </li>
+
+                            <li style={{position: 'absolute', left: '950px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/191530665/medium/fb688324ec9619136517.jpg' />
+                            </li>
+                        
+                        </ul>
+                    </Col>
+            </section>
         </Layout>
     )
       

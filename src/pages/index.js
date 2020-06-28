@@ -70,17 +70,13 @@ const IndexPage = () => {
                 <Col md='6'>
                     <div style={{marginLeft:'15px', width:'80%', paddingTop:'20%'}}>
                         <div>
-                            <h5 style={{color:'#73ff73', fontSize:'3rem'}}><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
-                            <p style={{color:'#fff', fontSize:'14px', fontWeight:'700'}}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
+                            <h5 className={indexstyle.banner_heading__text} ><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
+                            <p className={indexstyle.banner_subtitel__text}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
                         </div>
                     </div>
                 </Col>
-
-                <Col md='6'>
-                    <img src='../../blance.jpg' height="550px" width="100%" style={{paddingRight:'15px',paddingTop:'20%', objectFit:'cover', opacity:'.6'}}/>
-                </Col>
             </Row>
-            <Row style={{background:'rgba(255, 255, 255, 0.5)', margin:'-55px 0px 0px 0px', height:'55px'}}>
+            <Row style={{background:'#eaea1b', margin:'-55px 0px 0px 0px', height:'55px'}}>
                 <Col md='6'>
                     <div style={{display:'flex',margin: '10px 0'}}>
                         <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial'}}>Notice:</p>
