@@ -1,11 +1,10 @@
-.header_background{
-    background: url(../../static/banner.jpeg) right center;
-    object-fit: cover;
+
+.banner_slider__img{
     background-repeat: no-repeat;
-    height: 720px;
-    object-fit: contain;
-    margin-top: 60px;
-    margin-right: -40px;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    margin: 0;
 }
 
 .background_color__even{
@@ -50,9 +49,9 @@
 
 .banner_subtitel__text{
     color: #777777;
-    font-size: .9585rem;
+    font-size: 1rem;
     font-family: "EB Garamond", Garamond, "Times New Roman", serif;
-    font-weight: normal;
+    font-weight: 600;
 }
 
 .baner_bottom__img{
@@ -447,4 +446,37 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.section_heading__design{
+    font-size: 3rem;
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-weight: 800;
+    opacity: .4;
+    color: #eaea1b;
+}
+
+.section_heading__col{
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+ul > li > .mosaic_info__holder{
+    display: hidden;
+    color: #323a45;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 10%;
+}
+
+#ip > .mosaic_info__holder :hover{
+    display: block;
+    cursor: pointer;
+    transform: scale(1.2);
+    background: #fff;
 }

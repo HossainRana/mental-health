@@ -65,53 +65,135 @@ const IndexPage = () => {
         
         <Layout style={{overflowX:'hidden'}}>
             <Head title="Home"/>
-
-            <Row className={indexstyle.header_background} style={{paddingTop:'10px'}}>
-                <Col md='6'>
-                    <div style={{marginLeft:'15px', width:'80%', paddingTop:'20%'}}>
+            <section style={{paddingTop: '90px'}}>
+                <Row>
+                    <Col>
                         <div>
-                            <h5 className={indexstyle.banner_heading__text} ><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
-                            <p className={indexstyle.banner_subtitel__text}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
+                            <Carousel controls={false} indicators={false} interval={10000}>
+                                <Carousel.Item>
+                                    <img className={indexstyle.banner_slider__img} src='../../banner/img5.jpg'/>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img className={indexstyle.banner_slider__img} src='../../banner/img4.jpg'/>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img className={indexstyle.banner_slider__img} src='../../banner/img1.jpg'/>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img className={indexstyle.banner_slider__img} src='../../banner/img3.jpg'/>
+                                </Carousel.Item>
+                            </Carousel>
                         </div>
-                    </div>
-                </Col>
-            </Row>
-            <Row style={{background:'#eaea1b', margin:'-55px 0px 0px 0px', height:'55px'}}>
-                <Col md='6'>
-                    <div style={{display:'flex',margin: '10px 0'}}>
-                        <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial'}}>Notice:</p>
-                        <div className={indexstyle.banner_bottom__noticetext}> 
-                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div style={{marginLeft:'15px', width:'40%', position: 'absolute', top: '20%'}}>
+                            <div>
+                                <h5 className={indexstyle.banner_heading__text} ><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
+                                <p className={indexstyle.banner_subtitel__text}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
+                            </div>
                         </div>
-                    </div>
-                </Col>
-                <Col md='6' style={{textAlign:'center',}}>
+
+                    </Col>
+                </Row>
+            </section>
+            <section style={{background:'#F5D312', margin: '5px auto'}}>
+                <Row>
+                    <Col md='6'>
+                        <div style={{display:'flex',}}>
+                            <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial'}}>Notice:</p>
+                            <div className={indexstyle.banner_bottom__noticetext}> 
+                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md='6' style={{textAlign:'center',}}>
+                        <div>
+                            <div style={{display:'flex', paddingTop:'10px', justifyContent:'center'}}>
+                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/nytimes.png?v=25'/>
+                                <Link to='/newsection' >
+                                    <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/wsj.png?v=25'/>
+                                </Link>
+                                <Link to='/' >
+                                    <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/self.png?v=25'/>
+                                </Link>
+                                <Link to='/' >
+                                    <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/fox.png?v=25'/>
+                                </Link>
+                                <Link to='/' >
+                                    <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/chicagotribune.png?v=25'/>
+                                </Link>
+                                <Link to='/' >
+                                    <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/entrepeneur.png?v=25'/>
+                                </Link>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </section>
+            <section style={{margin: '0 auto'}}  className={indexstyle.background_color__even}>
+                <Col className={indexstyle.section_heading__col}>
                     <div>
-                        <div style={{display:'flex', paddingTop:'10px', justifyContent:'center'}}>
-                            <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/nytimes.png?v=25'/>
-                            <Link to='/newsection' >
-                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/wsj.png?v=25'/>
-                            </Link>
-                            <Link to='/' >
-                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/self.png?v=25'/>
-                            </Link>
-                            <Link to='/' >
-                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/fox.png?v=25'/>
-                            </Link>
-                            <Link to='/' >
-                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/chicagotribune.png?v=25'/>
-                            </Link>
-                            <Link to='/' >
-                                <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/entrepeneur.png?v=25'/>
-                            </Link>
-                        </div>
+                        <h1 className={indexstyle.section_heading__design}>Section</h1>
                     </div>
                 </Col>
-            </Row>
+                <Col>
+                    <ul style={{position: 'relative', height: '800px', width: '1140px', margin: '0 auto'}}>
+                        <li id= 'ip' className={indexstyle.li_view} style={{position: 'absolute', left: '0', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img}src='../../grid/img1.jpg' />
+                            <div className={indexstyle.mosaic_info__holder}>
+                                <h1>Hello</h1>
+                            </div>
+                        </li>
+                        
+                        <li style={{position: 'absolute', left: '190px', top: '0', height: '370px', width: '370px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img5.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '570px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img4.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '760px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img8.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '950px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img2.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '0', top: '190px', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img6.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '0', top: '380px', height: '370px', width: '370px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img3.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '570px', top: '190px', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img10.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '760px', top: '190px', height: '370px', width: '370px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img4.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '380px', top: '380px', height: '370px', width: '370px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img7.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '760px', top: '570px', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img11.jpg' />
+                        </li>
+
+                        <li style={{position: 'absolute', left: '950px', top: '570px', height: '180px', width: '180px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img9.jpg' />
+                        </li>
+                    
+                    </ul>
+                </Col>
+            </section>
             <section className={indexstyle.background_color__even}>
-                <Col style={{textAlign:'center', paddingTop: '50px'}}>
+                <Col className={indexstyle.section_heading__col}>
                     <div>
-                        <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>SERVICES</h1>
+                        <h1 className={indexstyle.section_heading__design}>SERVICES</h1>
                     </div>
                 </Col>
 
@@ -131,9 +213,9 @@ const IndexPage = () => {
             </section>
 
             <section className={indexstyle.background_color__odd}>
-                <Col style={{textAlign:'center', paddingTop: '50px'}}>
+                <Col className={indexstyle.section_heading__col}>
                     <div>
-                        <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>ARTICLES</h1>
+                        <h1 className={indexstyle.section_heading__design}>ARTICLES</h1>
                     </div>
                 </Col>
                 <Row style={{paddingTop:'20px',margin:'10px'}}>
@@ -187,8 +269,8 @@ const IndexPage = () => {
             </section>
             <section className={indexstyle.background_color__even}>
                 <Col>
-                    <div style={{textAlign:'center', paddingTop: '50px'}}>
-                        <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>WRITE US</h1>
+                    <div className={indexstyle.section_heading__col}>
+                        <h1 className={indexstyle.section_heading__design}>WRITE US</h1>
                     </div>
                 </Col>
                 
@@ -292,8 +374,8 @@ const IndexPage = () => {
                             
             <section className={indexstyle.background_color__even}>
                 <Col>
-                    <div style={{textAlign:'center', paddingTop: '50px'}}>
-                        <h1 style={{fontSize:'3rem', opacity:'.7', color:'#55b44c'}}>CUSTOMER TESTIMONIALS</h1>
+                    <div className={indexstyle.section_heading__col}>
+                        <h1 className={indexstyle.section_heading__design}>CUSTOMER TESTIMONIALS</h1>
                     </div>
                 </Col>
                 <Container style={{paddingTop:'3rem'}}>

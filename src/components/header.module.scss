@@ -1,6 +1,6 @@
 .header{
 
-    background: rgba(255, 255, 255, 255);
+    background: rgba(255, 255, 255, 0);
     display: block;
     width: 100%;
     position: fixed;
@@ -17,7 +17,6 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 99;
 }
 
 #nav_header #logo{
@@ -73,11 +72,13 @@
 
 }
 
-.navItem:hover {
-    color: #777777;
+.navItem:hover{
+    transform: scale(1.2);
+    transition-duration: .4s;
+    color: #eaea1b;
     text-decoration: none;
-    
 }
+
 
 .active-navItem {
 }
@@ -122,12 +123,19 @@
     height: 40px;
     margin-left: 10px;
     text-align: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0);
     font-family: "EB Garamond", Garamond, "Times New Roman", serif;
     font-weight: 700;
+    font-size: 20px;
 }
 
 .header_button__design:hover{
     transform: scale(1.2);
     transition-duration: .4s;
+}
+
+.header_logo__subtitle{
+    color: #eaea1b;
+    font-size: 10px;
+    margin-top: -40px;
 }
