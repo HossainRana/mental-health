@@ -1,4 +1,5 @@
-import React,{Component} from 'react'
+import React,{Component, useState} from 'react'
+import {Link, graphql, useStaticQuery} from 'gatsby'
 import Layout from '../components/layout'
 import indexstyle from './index.module.scss'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -6,6 +7,10 @@ import { Row, Col, Nav, Card, Button, Form, Container, Modal, ModalBody, ModalDi
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faPhone, faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import Head from '../components/head'
+import { ModalRoutingContext } from 'gatsby-plugin-modal-routing'
+import Dialog from '@material-ui/core/Dialog';
+import Moodal from 'react-modal'
+import ModalHeader from 'react-bootstrap/ModalHeader'
 
 const Modal_Section = () => {
 
@@ -83,34 +88,6 @@ const Modal_Section = () => {
                     </Col>
                 </Row>
             </Container>
-
-            <section style={{margin: '0 auto'}}>
-                
-                    <Col>
-                        <ul style={{position: 'relative', height: '800px', width: '1140px', margin: '0 auto'}}>
-                            <li style={{position: 'absolute', left: '0', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
-                                <img className={indexstyle.mosaic_grid__img}src='https://static.pxlecdn.com/photos/241018154/medium/a786fdd25f198f313d2f.jpg' />
-                            </li>
-                            
-                            <li style={{position: 'absolute', left: '190px', top: '0', height: '370px', width: '370px', listStyleType: 'none'}}>
-                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/308751433/medium/33c0e97ea330eafa73c1.jpg' />
-                            </li>
-
-                            <li style={{position: 'absolute', left: '570px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
-                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/295990323/medium/608702d59e732e697aed.jpg' />
-                            </li>
-
-                            <li style={{position: 'absolute', left: '760px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
-                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/228156418/medium/fa5aca47703177b35d8a.jpg' />
-                            </li>
-
-                            <li style={{position: 'absolute', left: '950px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
-                                <img className={indexstyle.mosaic_grid__img} src='https://static.pxlecdn.com/photos/191530665/medium/fb688324ec9619136517.jpg' />
-                            </li>
-                        
-                        </ul>
-                    </Col>
-            </section>
         </Layout>
     )
       

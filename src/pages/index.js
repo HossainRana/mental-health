@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React,{Component, useState} from 'react'
 import {Link, graphql, useStaticQuery} from 'gatsby'
 import style from './home.module.scss'
 import Layout from '../components/layout'
@@ -14,62 +14,43 @@ import Head from '../components/head'
 import StepWizard from 'react-step-wizard'
 import Left from '../components/left'
 import Right from '../components/right'
-
-const IndexPage = () => {
-
-    const  data = useStaticQuery(graphql`
-    query {
-        allRestApiPosts(filter: {endpointId: {lt:2}}){
-            edges {
-              node {
-                    endpointId
-                    title
-                    body
-                }
-            }
-        }
-        allRestApiUsers(filter: {email: {eq: "Karley_Dach@jasper.info"},})  {
-            edges {
-                node {
-                    name
-                    phone
-                    email
-                    username
-                    website
-                }
-            }
-        }
-        singleImage : allRestApiPhotos(filter: {url: {eq: "https://via.placeholder.com/600/d4212b"}})  {
-            edges {
-                node {
-                    url
-                    thumbnailUrl
-                }
-            }
-        }
-        thumbnail : allRestApiPhotos(filter: {endpointId: {lt: 2 }})  {
-            edges {
-                node {
-                    url
-                    thumbnailUrl
-                    title
-                }
-            }
-        }
-    }
-`)
+import Modal from '../pages/modal_template'
+import ServiceModal from '../components/Modal/ServiceModal'
 
 
+export class IndexPage extends Component  {
 
-    return (
-        
+    state =  {
+        show : false,  
+        modalData : '',
+        modalTitle : '',
+        modalQ1: '', 
+    };
+
+    handleOnClick = (s, d, e, q) => {
+        const { show, modalData, modalTitle, modalQ1  } = this.state;
+        this.setState({
+            show : s,
+            modalData : d,
+            modalTitle: e,
+            modalQ1 : q
+        });
+    };
+
+
+    render() {
+
+
+const { show, modalData, modalTitle, modalQ1 } = this.state;
+
+return(
         <Layout style={{overflowX:'hidden'}}>
             <Head title="Home"/>
-            <section style={{paddingTop: '90px'}}>
+            <section style={{}}>
                 <Row>
                     <Col>
                         <div>
-                            <Carousel controls={false} indicators={false} interval={10000}>
+                            <Carousel controls={false} indicators={false} interval={5000}>
                                 <Carousel.Item>
                                     <img className={indexstyle.banner_slider__img} src='../../banner/img5.jpg'/>
                                 </Carousel.Item>
@@ -77,30 +58,30 @@ const IndexPage = () => {
                                     <img className={indexstyle.banner_slider__img} src='../../banner/img4.jpg'/>
                                 </Carousel.Item>
                                 <Carousel.Item>
-                                    <img className={indexstyle.banner_slider__img} src='../../banner/img1.jpg'/>
-                                </Carousel.Item>
-                                <Carousel.Item>
                                     <img className={indexstyle.banner_slider__img} src='../../banner/img3.jpg'/>
                                 </Carousel.Item>
                             </Carousel>
                         </div>
-                        <div style={{marginLeft:'15px', width:'40%', position: 'absolute', top: '20%'}}>
-                            <div>
-                                <h5 className={indexstyle.banner_heading__text} ><p>Be Calm.</p><p>Life is tough,</p><p>But so you are.</p>                            </h5>
-                                <p className={indexstyle.banner_subtitel__text}>Everyone has a phycological break down in some way. Mindshaper is here to help you realize that you are not alone on your road to recovery. Start feeling better with a single phone call.</p>
+                        <div style={{marginLeft:'15px', width:'50%', position: 'absolute', top: '40%'}}>
+                            <div className={indexstyle.banner_heading}>
+                                <h5 className={indexstyle.banner_heading__text} >
+                                    <p>Choose your right path, </p>
+                                    <p>We are here to help you.</p>
+                                </h5>
+                                <p className={indexstyle.banner_subtitel__text} > MindShaper is an interactive mental health platform that provides a full-spectrum mental health services. It focuses on an individual's strength and positivity. We believe in caring and the motto of the MindShaper is “Happiness” and vision to make the world healthier. </p>
                             </div>
                         </div>
 
                     </Col>
                 </Row>
             </section>
-            <section style={{background:'#F5D312', margin: '5px auto'}}>
+            <section style={{background:'rgb(255, 221, 25)'}}>
                 <Row>
                     <Col md='6'>
                         <div style={{display:'flex',}}>
-                            <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial'}}>Notice:</p>
+                            <p style={{fontSize:'20px',marginBottom:'0',fontWeight:'600',marginLeft:'10px', fontFamily:'initial', marginTop: '8px'}}>Notice:</p>
                             <div className={indexstyle.banner_bottom__noticetext}> 
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p style={{marginBottom: '15px'}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                     </Col>
@@ -111,7 +92,7 @@ const IndexPage = () => {
                                 <Link to='/newsection' >
                                     <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/wsj.png?v=25'/>
                                 </Link>
-                                <Link to='/' >
+                                <Link  >
                                     <img className={indexstyle.baner_bottom__img} src='//dy7glz37jgl0b.cloudfront.net/start/self.png?v=25'/>
                                 </Link>
                                 <Link to='/' >
@@ -131,60 +112,235 @@ const IndexPage = () => {
             <section style={{margin: '0 auto'}}  className={indexstyle.background_color__even}>
                 <Col className={indexstyle.section_heading__col}>
                     <div>
-                        <h1 className={indexstyle.section_heading__design}>Section</h1>
+                        <h1 className={indexstyle.section_heading__design} style={{fontSize: '1.5rem'}}>We are here, ready to help you. You deserve the best. Our expert can help with...</h1>
                     </div>
                 </Col>
                 <Col>
                     <ul style={{position: 'relative', height: '800px', width: '1140px', margin: '0 auto'}}>
-                        <li id= 'ip' className={indexstyle.li_view} style={{position: 'absolute', left: '0', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                    
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
+
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "Anger")
+                        } id= 'ip' className={indexstyle.li_view} style={{position: 'absolute', left: '0', top: '0', height: '370px', width: '180px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img}src='../../grid/img1.jpg' />
-                            <div className={indexstyle.mosaic_info__holder}>
-                                <h1>Hello</h1>
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Anger</h4>
+                                </div>
                             </div>
                         </li>
                         
-                        <li style={{position: 'absolute', left: '190px', top: '0', height: '370px', width: '370px', listStyleType: 'none'}}>
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
+
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "DEPRESSION")
+                        }  style={{position: 'absolute', left: '190px', top: '0', height: '370px', width: '370px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img} src='../../grid/img5.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Depression</h4>
+                                </div>
+                            </div>
                         </li>
 
-                        <li style={{position: 'absolute', left: '570px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
-                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img4.jpg' />
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
+
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "STRESS")
+                        }  style={{position: 'absolute', left: '570px', top: '0', height: '180px', width: '370px', listStyleType: 'none'}}>
+                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img12.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Stress</h4>
+                                </div>
+                            </div>
                         </li>
 
-                        <li style={{position: 'absolute', left: '760px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
-                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img8.jpg' />
-                        </li>
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
 
-                        <li style={{position: 'absolute', left: '950px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "GRIF")
+                        }  style={{position: 'absolute', left: '950px', top: '0', height: '180px', width: '180px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img} src='../../grid/img2.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Grief</h4>
+                                </div>
+                            </div>
                         </li>
 
-                        <li style={{position: 'absolute', left: '0', top: '190px', height: '180px', width: '180px', listStyleType: 'none'}}>
-                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img6.jpg' />
-                        </li>
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
 
-                        <li style={{position: 'absolute', left: '0', top: '380px', height: '370px', width: '370px', listStyleType: 'none'}}>
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "RELATIONSHIP")
+                        }  style={{position: 'absolute', left: '0', top: '380px', height: '370px', width: '370px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img} src='../../grid/img3.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Relationship</h4>
+                                </div>
+                            </div>
                         </li>
 
-                        <li style={{position: 'absolute', left: '570px', top: '190px', height: '180px', width: '180px', listStyleType: 'none'}}>
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
+
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "SADNESS")
+                        }  style={{position: 'absolute', left: '570px', top: '190px', height: '180px', width: '180px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img} src='../../grid/img10.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Sadness</h4>
+                                </div>
+                            </div>
                         </li>
 
-                        <li style={{position: 'absolute', left: '760px', top: '190px', height: '370px', width: '370px', listStyleType: 'none'}}>
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
+
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "ANXIETY")
+                        }  style={{position: 'absolute', left: '760px', top: '190px', height: '370px', width: '370px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img} src='../../grid/img4.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Anxiety</h4>
+                                </div>
+                            </div>
                         </li>
 
-                        <li style={{position: 'absolute', left: '380px', top: '380px', height: '370px', width: '370px', listStyleType: 'none'}}>
+                        <li onClick={() => 
+                            this.handleOnClick(true, (
+
+                                <div style={{margin: '10px'}}>
+                                    <h4>What type of counseling you are looking for?</h4>
+                                    <Form>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Individual conseling (for myself)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Couple counseling (for myself and my partner)" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Teenage counseling (for my child)" />
+                                        </Form.Group>
+                                    </Form>
+                                </div>
+                            ), "SELF-ESTEEM")
+                        }  style={{position: 'absolute', left: '380px', top: '380px', height: '370px', width: '370px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img} src='../../grid/img7.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Self-Esteem</h4>
+                                </div>
+                            </div>
                         </li>
 
-                        <li style={{position: 'absolute', left: '760px', top: '570px', height: '180px', width: '180px', listStyleType: 'none'}}>
-                            <img className={indexstyle.mosaic_grid__img} src='../../grid/img11.jpg' />
-                        </li>
-
-                        <li style={{position: 'absolute', left: '950px', top: '570px', height: '180px', width: '180px', listStyleType: 'none'}}>
+                        <li style={{position: 'absolute', left: '760px', top: '570px', height: '180px', width: '370px', listStyleType: 'none'}}>
                             <img className={indexstyle.mosaic_grid__img} src='../../grid/img9.jpg' />
+                            <div className={`${indexstyle.mosaic_info__holder} ${indexstyle.issue_name_design}`}>
+                                <div className={indexstyle.text_design}>
+                                    <h4>Others...</h4>
+                                </div>
+                            </div>
                         </li>
                     
                     </ul>
@@ -236,20 +392,16 @@ const IndexPage = () => {
                     country is not possible by excluding a single population.</p>
                    </Col>
                    <Col md='6' style={{height:'450px', border:'1px solid rgba(199, 182, 182, 0.12)', borderRadius:'5px', display:'none'}}>
-                        {data.thumbnail.edges.map(edge =>{
-                            return (
-                                <div style={{marginTop:'5px', width:'100%'}}> 
-                                    <div style={{marginTop:'5px'}}>
-                                        <img src={edge.node.url} height="300px" width="100%"/>
-                                                                            
-                                    </div>
-                                    <div style={{width:'100%'}}>
-                                        <p style={{marginLeft:'5px',fontSize:'16px',height:'20px'}}>{edge.node.title}</p>   
-                                        <Link to={`/articles/${edge.node.title}`}><button className={indexstyle._button} style={{float:'right', marginRight:'20px', width:'100px', height:'30px'}}>Read</button></Link>
-                                    </div>
-                                </div>
-                            )
-                        })}
+                        <div style={{marginTop:'5px', width:'100%'}}> 
+                            <div style={{marginTop:'5px'}}>
+                                <img  height="300px" width="100%"/>
+                                                                    
+                            </div>
+                            <div style={{width:'100%'}}>
+                                <p style={{marginLeft:'5px',fontSize:'16px',height:'20px'}}></p>   
+                                <Link><button className={indexstyle._button} style={{float:'right', marginRight:'20px', width:'100px', height:'30px'}}>Read</button></Link>
+                            </div>
+                        </div>
                         <Link to='/blog'><button className={indexstyle._button} style={{float:'right', marginRight:'20px', width:'100px', height:'30px'}}>show all</button></Link>
                    </Col>   
                    <Col md='6' style={{height:'450px', border:'1px solid rgba(199, 182, 182, 0.12)', borderRadius:'5px'}}>
@@ -450,10 +602,17 @@ const IndexPage = () => {
                     </Carousel>
                 </Container>
                 
+                <ServiceModal
+                    show={show}
+                    data={modalData}
+                    title={modalTitle}
+                    question={modalQ1}
+                    onHide={() => this.handleOnClick(false, "", "", "")}
+                />
             </section>
         </Layout>
-        
-    )
+)   
+    }
 }
 
 export default IndexPage

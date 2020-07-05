@@ -45,7 +45,7 @@ const Header = () =>{
               } else {
                 document.getElementById("nav_header").style.padding = "15px 10px";
                 document.getElementById("nav_header").style.boxShadow = "none";
-                document.getElementById("nav_header").style.background = "rgba(255, 255, 255,255)";
+                document.getElementById("nav_header").style.background = "rgba(255, 255, 255,0)";
               }
             }
         }
@@ -58,7 +58,6 @@ const Header = () =>{
         <Row>
             <Col md='2' style={{height: '86px', width: '120px', margin: 'auto', textAlign: 'center'}}>
                 <Link to='/'><img id='logo' src='../../mindShaper.png' style={{height: '100%', width: '90px', }}/></Link>
-                <p className={headerStyle.header_logo__subtitle}>The Shape of Happiness</p>
             </Col>
             <Col md='6'>
                 <div className={headerStyle.list_div}>
@@ -81,10 +80,10 @@ const Header = () =>{
             <Col md='4' className={headerStyle.list_div} style={{justifyContent: 'flex-end'}}>
                 <ul className={headerStyle.navList} style={{paddingTop: '10px'}}>
                     <li >
-                        <button className={headerStyle.header_button__design}><Link activeClassName={headerStyle.activeNavItem}  to ='/' style={{color: 'purple', textDecoration: 'none'}}>SIGN IN</Link></button>
+                        <button className={`${headerStyle.header_button__design} ${headerStyle.navItem}`}><Link activeClassName={headerStyle.activeNavItem}  to ='/' style={{textDecoration: 'none', color: '#0b7b00'}}>Sign In</Link></button>
                     </li>
                     <li>
-                        <button className={headerStyle.header_button__design}><Link activeClassName={headerStyle.activeNavItem} to ='/' style={{color: 'purple', textDecoration: 'none'}}>SIGN UP</Link></button>
+                        <button className={`${headerStyle.header_button__design} ${headerStyle.navItem}`}><Link activeClassName={headerStyle.activeNavItem} to ='/' style={{textDecoration: 'none', color: '#0b7b00'}}>Sign Up</Link></button>
                     </li>
                 </ul>
             </Col>
